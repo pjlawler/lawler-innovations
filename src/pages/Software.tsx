@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import Contact from "../components/Contact"
+import letsGoFlyIcon from "../assets/lets-go-fly-icon.jpg"
+import cirrusApproachIcon from "../assets/cirrus-approach-icon.jpg"
 
 const services = [
   {
@@ -25,6 +27,55 @@ const services = [
     title: "Consulting & Architecture",
     body: "Technical strategy, system design, and a steady hand from someone who has shipped real products end to end.",
     chips: ["Strategy", "Architecture", "Review"],
+  },
+]
+
+const projects: {
+  icon?: string
+  brand?: string
+  image?: string
+  type: string
+  title: string
+  body: string
+  tech: string[]
+  link?: string
+}[] = [
+  {
+    image: cirrusApproachIcon,
+    type: "iOS · Aviation EdTech",
+    title: "Cirrus Approach",
+    body: "We lead iOS development of Cirrus Approach — the app pilots and instructors use to access the Cirrus Approach Learning Management System through video courses, interactive lessons, and quizzes. Built in SwiftUI across 25+ API integrations, with Pat serving as the Cirrus pilot and instructor subject-matter expert throughout.",
+    tech: ["SwiftUI", "Swift", "REST APIs", "Azure DevOps"],
+    link: "https://apps.apple.com/us/app/cirrus-approach/id1448733796",
+  },
+  {
+    image: letsGoFlyIcon,
+    type: "iOS · Augmented Reality",
+    title: "Let's Go Fly!",
+    body: "A Cirrus Aircraft app pairing an immersive SR22T flight with an augmented-reality walk-around of a full-sized 3D aircraft. We provided all of the initial discovery and SwiftUI coding and built the initial MVP that debuted at AirVenture Oshkosh in 2024.",
+    tech: ["ARKit", "SwiftUI", "3D"],
+    link: "https://apps.apple.com/us/app/lets-go-fly/id6757612693",
+  },
+  {
+    icon: "🧪",
+    type: "Full-Stack · iOS",
+    title: "911 Drug Test Network",
+    body: "A full-stack website plus a proprietary scheduling website and iOS app that a nationwide drug & alcohol testing business runs on day to day.",
+    tech: ["Full-Stack", "MERN", "iOS"],
+  },
+  {
+    icon: "🍎",
+    type: "App Store",
+    title: "Published iOS Apps",
+    body: "Independently designed and shipped to the App Store: FunctionCalc, Learn Thai – Alphabet, and CalorieCalc – Averaging.",
+    tech: ["Swift", "SwiftUI"],
+  },
+  {
+    icon: "📊",
+    type: "Internal Tools",
+    title: "Aviation & Ops Tooling",
+    body: "Workflow tools that streamlined real operations — ALPA PBS pilot-scheduling systems and Microsoft Access/Excel VBA tools for Endeavor Air and Lake Superior College.",
+    tech: ["VBA", "SQL", "Automation"],
   },
 ]
 
@@ -83,6 +134,54 @@ function Software() {
                       {c}
                     </span>
                   ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <p className="eyebrow accent-text">Selected Work</p>
+          <h2 className="section-title">Projects we've shipped</h2>
+          <p className="section-lead">
+            From aviation training platforms to full-stack business systems — a
+            sample of work delivered through Lawler Innovations.
+          </p>
+          <div className="project-grid" style={{ marginTop: 48 }}>
+            {projects.map((p) => (
+              <div className="project-card" key={p.title}>
+                <div className="thumb" aria-hidden>
+                  {p.image ? (
+                    <img className="pc-appicon" src={p.image} alt="" />
+                  ) : p.brand ? (
+                    <span className="pc-wordmark">{p.brand}</span>
+                  ) : (
+                    p.icon
+                  )}
+                </div>
+                <div className="pc-body">
+                  <p className="pc-type">{p.type}</p>
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                  <div className="chip-row">
+                    {p.tech.map((t) => (
+                      <span className="chip" key={t}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  {p.link && (
+                    <a
+                      className="pc-link"
+                      href={p.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View on the App Store ↗
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

@@ -335,6 +335,95 @@
 .price-card .price-meta .mk { color: var(--accent); font-weight: 700; flex-shrink: 0; }
 .price-card .btn { width: 100%; justify-content: center; }
 
+/* ============ Portfolio / project gallery ============ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 880px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .project-grid { grid-template-columns: 1fr; } }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.2s ease;
+}
+.project-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+.project-card .thumb {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  font-size: 2.6rem;
+  background:
+    radial-gradient(circle at 30% 28%, var(--glow), transparent 70%),
+    var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card .pc-wordmark {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.project-card .pc-appicon {
+  width: 84px;
+  height: 84px;
+  border-radius: 19px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.65);
+}
+
+.project-card .pc-link {
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--accent-2);
+  transition: color 0.2s ease;
+}
+.project-card .pc-link:hover { color: var(--accent); }
+
+.project-card .pc-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 22px 24px;
+}
+.project-card .pc-type {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.project-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.project-card .pc-body > p { color: var(--muted); font-size: 0.92rem; }
+.project-card .chip-row {
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.project-card .chip {
+  font-size: 0.72rem;
+  color: var(--dim);
+  font-family: var(--mono);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
 /* ============ Capability list ============ */
 .cap-list { display: grid; gap: 14px; margin-top: 26px; }
 .cap-list li {
