@@ -11,8 +11,8 @@ const services = [
   {
     icon: "🎓",
     title: "Flight Instruction",
-    body: "Personalized training that builds genuinely capable, confident pilots — from primary students to advanced ratings.",
-    chips: ["CFI", "Primary", "Advanced"],
+    body: "Platinum CSIP, CFI/CFII instructors specializing in instrument, long cross-country, and Cirrus transition training.",
+    chips: ["Platinum CSIP", "Instrument & XC", "$1,000/day"],
   },
   {
     icon: "🛩️",
@@ -43,6 +43,24 @@ const pilotPoints = [
     icon: "🛡️",
     title: "Professional Part 91 operation",
     body: "Disciplined, safety-first operation of your aircraft — handled with the care you'd expect for your own airplane.",
+  },
+]
+
+const instructionPoints = [
+  {
+    icon: "📐",
+    title: "Instrument training",
+    body: "Earn your instrument rating or sharpen IFR proficiency, taught in the Cirrus's advanced glass avionics.",
+  },
+  {
+    icon: "🗺️",
+    title: "Long cross-country",
+    body: "Build real cross-country command — planning, weather, and decision-making across long, demanding legs.",
+  },
+  {
+    icon: "🎓",
+    title: "Cirrus transition training",
+    body: "Transition into your SR20, SR22, or Vision Jet with factory-standard training built around the airframe.",
   },
 ]
 
@@ -125,6 +143,56 @@ function Aviation() {
               </ul>
               <a className="btn btn-primary" href="#contact">
                 Request a pilot
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow accent-text">Flight Instruction</p>
+          <h2 className="section-title">Cirrus training from Platinum CSIP instructors</h2>
+          <p className="section-lead">
+            Every instructor is a Platinum CSIP — Cirrus's highest standardized
+            rating — and dual-rated CFI/CFII. Specialized instruction in the
+            aircraft you fly.
+          </p>
+          <div className="spotlight">
+            <div className="spotlight-points">
+              {instructionPoints.map((p) => (
+                <div className="spotlight-point" key={p.title}>
+                  <div className="pt-icon">{p.icon}</div>
+                  <div>
+                    <h4>{p.title}</h4>
+                    <p>{p.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="price-card">
+              <p className="price-label">Instructor Day Rate</p>
+              <div className="price">
+                <span className="amount">$1,000</span>
+                <span className="per">/ day</span>
+              </div>
+              <p className="price-note">plus incurred expenses, billed at cost</p>
+              <ul className="price-meta">
+                <li>
+                  <span className="mk">✓</span>Platinum CSIP, CFI/CFII instructors
+                </li>
+                <li>
+                  <span className="mk">✓</span>Instrument, cross-country &amp; transition
+                </li>
+                <li>
+                  <span className="mk">✓</span>Travel to &amp; from the training location
+                </li>
+                <li>
+                  <span className="mk">✓</span>Fuel, fees &amp; lodging at cost
+                </li>
+              </ul>
+              <a className="btn btn-primary" href="#contact">
+                Book training
               </a>
             </div>
           </div>
