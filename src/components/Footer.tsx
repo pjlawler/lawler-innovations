@@ -9,10 +9,7 @@ function Footer() {
         <div className="footer-links">
           <Link to="/software">Software Engineering</Link>
           <Link to="/aviation">Aviation Services</Link>
-          <a href="https://patlawler.com" target="_blank" rel="noreferrer">
-            Pat Lawler ↗
-          </a>
-          <a href="mailto:pat@lawlerinnovationsinc.com">Contact</a>
+          <Link to="/about">About</Link>
         </div>
       </div>
     </footer>

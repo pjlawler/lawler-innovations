@@ -18,14 +18,9 @@ function Header() {
           <NavLink to="/aviation" className="nav-link">
             Aviation
           </NavLink>
-          <a
-            className="founder"
-            href="https://patlawler.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Pat Lawler ↗
-          </a>
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
         </nav>
       </div>
     </header>

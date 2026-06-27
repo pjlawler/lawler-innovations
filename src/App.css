@@ -410,6 +410,58 @@
 .field textarea { resize: vertical; min-height: 120px; }
 .contact-card .btn { width: 100%; justify-content: center; }
 
+/* ============ About (story + founder) ============ */
+.about-story { max-width: 680px; margin-top: 6px; }
+.about-story p { color: var(--muted); font-size: 1.06rem; margin-top: 16px; }
+
+.about-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+@media (max-width: 480px) {
+  .about-header { gap: 16px; }
+}
+
+.about-photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 132px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(165deg, var(--sw-glow), var(--av-glow));
+}
+.about-photo img { width: 100%; height: auto; }
+
+.about-body { max-width: 680px; }
+.about-title h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 4px 0 6px; }
+.about-body .role {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0;
+}
+.about-body > p { color: var(--muted); margin-top: 14px; max-width: 580px; }
+
+.about-creds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.about-creds .chip {
+  font-size: 0.76rem;
+  color: var(--dim);
+  font-family: var(--mono);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.about-more { margin-top: 28px; }
+
 /* ============ Footer ============ */
 .footer { border-top: 1px solid var(--border); padding: 40px 0; }
 .footer-inner {
