@@ -5,6 +5,7 @@ import cirrusApproachIcon from "../assets/cirrus-approach-icon.jpg"
 import drugTestLogo from "../assets/911-logo.svg"
 import learnThaiIcon from "../assets/learn-thai-icon.jpg"
 import functionCalcIcon from "../assets/functioncalc-icon.jpg"
+import calorieCalcIcon from "../assets/caloriecalc-icon.jpg"
 
 const services = [
   {
@@ -85,11 +86,12 @@ const projects: {
     link: "https://apps.apple.com/us/app/functioncalc/id1455028714",
   },
   {
-    icon: "📊",
-    type: "Internal Tools",
-    title: "Aviation & Ops Tooling",
-    body: "Workflow tools that streamlined real operations — ALPA PBS pilot-scheduling systems and Microsoft Access/Excel VBA tools for Endeavor Air and Lake Superior College.",
-    tech: ["VBA", "SQL", "Automation"],
+    image: calorieCalcIcon,
+    type: "iOS · Health & Fitness",
+    title: "CalorieCalc – Averaging",
+    body: "We designed, created, and maintain CalorieCalc – Averaging, a stripped-down calorie tracker with no social feeds or upsells — just fast logging and the weekly averaging the big trackers leave out.",
+    tech: ["Swift", "SwiftUI"],
+    link: "https://apps.apple.com/us/app/caloriecalc-averaging/id6762500390",
   },
 ]
 
