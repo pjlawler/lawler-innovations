@@ -2,6 +2,9 @@ import { Link } from "react-router-dom"
 import Contact from "../components/Contact"
 import letsGoFlyIcon from "../assets/lets-go-fly-icon.jpg"
 import cirrusApproachIcon from "../assets/cirrus-approach-icon.jpg"
+import drugTestLogo from "../assets/911-logo.svg"
+import learnThaiIcon from "../assets/learn-thai-icon.jpg"
+import functionCalcIcon from "../assets/functioncalc-icon.jpg"
 
 const services = [
   {
@@ -34,6 +37,7 @@ const projects: {
   icon?: string
   brand?: string
   image?: string
+  logo?: string
   type: string
   title: string
   body: string
@@ -57,18 +61,28 @@ const projects: {
     link: "https://apps.apple.com/us/app/lets-go-fly/id6757612693",
   },
   {
-    icon: "🧪",
+    logo: drugTestLogo,
     type: "Full-Stack · iOS",
     title: "911 Drug Test Network",
-    body: "A full-stack website plus a proprietary scheduling website and iOS app that a nationwide drug & alcohol testing business runs on day to day.",
+    body: "We designed, built, and continue to maintain the full-stack 911 Drug Test Network platform — the website plus a proprietary scheduling site and iOS app this nationwide drug & alcohol testing business runs on. Delivered and maintained through a CI/CD process, working directly with the stakeholders.",
     tech: ["Full-Stack", "MERN", "iOS"],
+    link: "https://911drugtest.com",
   },
   {
-    icon: "🍎",
-    type: "App Store",
-    title: "Published iOS Apps",
-    body: "Independently designed and shipped to the App Store: FunctionCalc, Learn Thai – Alphabet, and CalorieCalc – Averaging.",
+    image: learnThaiIcon,
+    type: "iOS · Language Learning",
+    title: "Learn Thai – Alphabet",
+    body: "We designed, created, and maintain this iOS app that teaches the Thai alphabet through repetition and a native Thai speaker.",
+    tech: ["Swift", "iOS"],
+    link: "https://apps.apple.com/us/app/learn-thai-alphabet/id1505140057",
+  },
+  {
+    image: functionCalcIcon,
+    type: "iOS · Utilities",
+    title: "FunctionCalc",
+    body: "We designed, created, and maintain FunctionCalc — an all-in-one calculator and toolkit (VA disability calculator, date tracker, tip splitter, unit converter, and more) built for veterans, now in its fourth major revision.",
     tech: ["Swift", "SwiftUI"],
+    link: "https://apps.apple.com/us/app/functioncalc/id1455028714",
   },
   {
     icon: "📊",
@@ -155,6 +169,8 @@ function Software() {
                 <div className="thumb" aria-hidden>
                   {p.image ? (
                     <img className="pc-appicon" src={p.image} alt="" />
+                  ) : p.logo ? (
+                    <img className="pc-logo" src={p.logo} alt="" />
                   ) : p.brand ? (
                     <span className="pc-wordmark">{p.brand}</span>
                   ) : (
@@ -179,7 +195,9 @@ function Software() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      View on the App Store ↗
+                      {p.link.includes("apps.apple.com")
+                        ? "View on the App Store ↗"
+                        : "Visit the site ↗"}
                     </a>
                   )}
                 </div>
