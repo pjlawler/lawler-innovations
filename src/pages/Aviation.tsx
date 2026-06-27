@@ -5,8 +5,8 @@ const services = [
   {
     icon: "✈️",
     title: "Contract Piloting",
-    body: "Professional pilot services for owners and operators who need an experienced, dependable aviator at the controls.",
-    chips: ["Part 91", "Owner ops", "Ferry flights"],
+    body: "Cirrus Factory Trained pilots to fly your aircraft for a single day or a multi-day trip — current, professional, and dependable.",
+    chips: ["Cirrus Factory Trained", "Single & multi-day", "$750/day"],
   },
   {
     icon: "🎓",
@@ -25,6 +25,24 @@ const services = [
     title: "Community & Partners",
     body: "Connected to the regional aviation community, including the Duluth Flying Club and trusted partner operations.",
     chips: ["Duluth Flying Club", "Partners"],
+  },
+]
+
+const pilotPoints = [
+  {
+    icon: "🗓️",
+    title: "Single & multi-day engagements",
+    body: "Book a pilot for a single day or a multi-day trip — owner flights, repositioning, ferries, and events. You set the schedule; we fly it.",
+  },
+  {
+    icon: "🎖️",
+    title: "Cirrus Factory Trained pilots",
+    body: "Every pilot we send is Cirrus Factory Trained, current, and standardized to the same high safety bar.",
+  },
+  {
+    icon: "🛡️",
+    title: "Professional Part 91 operation",
+    body: "Disciplined, safety-first operation of your aircraft — handled with the care you'd expect for your own airplane.",
   },
 ]
 
@@ -59,6 +77,56 @@ function Aviation() {
             <Link className="btn btn-ghost" to="/software">
               Explore Software →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow accent-text">Contract Piloting</p>
+          <h2 className="section-title">A professional pilot for a day — or a week</h2>
+          <p className="section-lead">
+            Need someone in the left seat? We provide Cirrus Factory Trained
+            pilots for single-day and multi-day engagements — so your aircraft
+            flies when you need it to.
+          </p>
+          <div className="spotlight">
+            <div className="spotlight-points">
+              {pilotPoints.map((p) => (
+                <div className="spotlight-point" key={p.title}>
+                  <div className="pt-icon">{p.icon}</div>
+                  <div>
+                    <h4>{p.title}</h4>
+                    <p>{p.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="price-card">
+              <p className="price-label">Day Rate</p>
+              <div className="price">
+                <span className="amount">$750</span>
+                <span className="per">/ day</span>
+              </div>
+              <p className="price-note">plus incurred expenses, billed at cost</p>
+              <ul className="price-meta">
+                <li>
+                  <span className="mk">✓</span>Single or multi-day engagements
+                </li>
+                <li>
+                  <span className="mk">✓</span>Cirrus Factory Trained pilots
+                </li>
+                <li>
+                  <span className="mk">✓</span>Travel to &amp; from the job location
+                </li>
+                <li>
+                  <span className="mk">✓</span>Fuel, fees &amp; lodging at cost
+                </li>
+              </ul>
+              <a className="btn btn-primary" href="#contact">
+                Request a pilot
+              </a>
+            </div>
           </div>
         </div>
       </section>
