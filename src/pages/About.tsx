@@ -59,32 +59,21 @@ function About() {
               </div>
             </div>
             <p>
-              Pat Lawler is the founder and president of Lawler Innovations, Inc.
-              A Master Sergeant in the U.S. Air Force (Ret.) and a veteran of the
-              wars in Iraq and Afghanistan, he spent a career as a military
-              avionics technician and instructor — learning to break a complex
-              system down, find the real problem, and teach the next person to do
-              the same.
+              A Master Sergeant in the U.S. Air Force (Ret.), Pat spent a career
+              as a military avionics technician and instructor — learning to
+              break a complex system down, find the real problem, and teach the
+              next person to do the same.
             </p>
             <p>
               He carries that same discipline into the cockpit and the codebase:
               a dual-rated Airline Transport Pilot with more than 4,500 flight
               hours and a Platinum Cirrus Standardized Instructor Pilot, as well
-              as a self-taught full-stack software engineer with a master's in
-              Aeronautical Science. He founded Lawler Innovations to bring both
-              worlds under one roof — contract piloting, flight instruction, and
-              custom software.
-            </p>
-            <p>
-              That blend shows up directly in his work. For nearly four years he
-              has led iOS development on the Cirrus Approach mobile team —
-              building the app pilots use to interact with the Cirrus Approach
-              Learning Management System (LMS), while serving as the team's
-              Cirrus pilot and instructor subject-matter expert. Working Agile
-              with Azure DevOps and CI/CD, he ships in SwiftUI across 25+ API
-              integrations, and in early 2024 helped build an augmented-reality
-              preflight feature that lets students walk around a virtual 3D
-              aircraft alongside an interactive checklist.
+              as a largely self-taught software engineer who sharpened
+              that foundation in the University of Minnesota's six-month
+              Full-Stack Developer bootcamp, graduating with a 99.48 out of 100.
+              He also holds a master's in Aeronautical Science. He founded Lawler
+              Innovations to bring both worlds under one roof — contract piloting,
+              flight instruction, and custom software.
             </p>
             <div className="about-creds">
               {creds.map((c) => (

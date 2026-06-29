@@ -66,7 +66,7 @@ const projects: {
     type: "Full-Stack · Logistics",
     title: "911 Drug Test Network",
     body: "We designed, built, and continue to maintain the full-stack 911 Drug Test Network platform — the website plus a proprietary scheduling site and iOS app this nationwide drug & alcohol testing business runs on. Delivered and maintained through a CI/CD process, working directly with the stakeholders.",
-    tech: ["Full-Stack", "MERN", "iOS"],
+    tech: ["Cloudflare Workers", "Hono", "TypeScript", "D1", "R2", "Durable Objects", "PWA"],
     link: "https://911drugtest.com",
   },
   {
