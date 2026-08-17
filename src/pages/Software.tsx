@@ -3,6 +3,7 @@ import Contact from "../components/Contact"
 import letsGoFlyIcon from "../assets/lets-go-fly-icon.jpg"
 import cirrusApproachIcon from "../assets/cirrus-approach-icon.jpg"
 import drugTestLogo from "../assets/911-logo.svg"
+import tenviloIcon from "../assets/tenvilo-icon.png"
 import learnThaiIcon from "../assets/learn-thai-icon.jpg"
 import functionCalcIcon from "../assets/functioncalc-icon.jpg"
 import calorieCalcIcon from "../assets/caloriecalc-icon.jpg"
@@ -68,6 +69,14 @@ const projects: {
     body: "We designed, built, and continue to maintain the full-stack 911 Drug Test Network platform — the website plus a proprietary scheduling site and iOS app this nationwide drug & alcohol testing business runs on. Delivered and maintained through a CI/CD process, working directly with the stakeholders.",
     tech: ["Cloudflare Workers", "Hono", "TypeScript", "D1", "R2", "Durable Objects", "PWA"],
     link: "https://911drugtest.com",
+  },
+  {
+    image: tenviloIcon,
+    type: "Full-Stack · Personal Finance",
+    title: "Tenvilo",
+    body: "We designed, built, and maintain Tenvilo — an annual budgeting and cash-flow forecasting app built around a money-management system rather than a spreadsheet. Bank connections through Plaid, subscription billing through Stripe, and an installable PWA, all running on the edge.",
+    tech: ["Next.js", "TypeScript", "Cloudflare Workers", "D1", "Plaid", "Stripe"],
+    link: "https://tenvilo.com",
   },
   {
     image: learnThaiIcon,
